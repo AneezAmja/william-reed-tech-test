@@ -87,20 +87,14 @@
           <div class="card my-3">
             <div class="card-body">
               <h5 class="card-title">Related News</h5>
-              <ul class="list-group">
-                <li class="list-group-item">News Article 1</li>
-                <li class="list-group-item">News Article 2</li>
-              </ul>
+              <ul class="list-group related-news"></ul>
             </div>
           </div>
 
           <div class="card my-3">
             <div class="card-body">
               <h5 class="card-title">Popular News</h5>
-              <ul class="list-group">
-                <li class="list-group-item">News Article 1</li>
-                <li class="list-group-item">News Article 2</li>
-              </ul>
+              <ul class="list-group popular-news"></ul>
             </div>
           </div>
         </div>
@@ -151,6 +145,60 @@
                 blockquote.appendChild(footer);
                 contentContainer.appendChild(blockquote);
               }
+            });
+
+            //Related news
+            const relatedNewsContainer =
+              document.querySelector(".related-news");
+
+            data.relatedNews.forEach((relatedNewsItem) => {
+              const newsItem = document.createElement("li");
+              newsItem.className = "list-group-item";
+
+              relatedNewsContainer.appendChild(newsItem);
+
+              const newsLink = document.createElement("a");
+              newsLink.classList.add("text-decoration-none");
+              newsLink.href = relatedNewsItem.link;
+
+              newsItem.appendChild(newsLink);
+
+              const newsTitle = document.createElement("h5");
+              newsTitle.textContent = relatedNewsItem.title;
+
+              newsLink.appendChild(newsTitle);
+
+              const newsDescription = document.createElement("p");
+              newsDescription.textContent = relatedNewsItem.description;
+
+              newsLink.appendChild(newsDescription);
+            });
+
+            //Popular news
+            const popularNewsContainer =
+              document.querySelector(".popular-news");
+
+            data.popularNews.forEach((popularNewsItem) => {
+              const newsItem = document.createElement("li");
+              newsItem.className = "list-group-item";
+
+              popularNewsContainer.appendChild(newsItem);
+
+              const newsLink = document.createElement("a");
+              newsLink.classList.add("text-decoration-none");
+              newsLink.href = popularNewsItem.link;
+
+              newsItem.appendChild(newsLink);
+
+              const newsTitle = document.createElement("h5");
+              newsTitle.textContent = popularNewsItem.title;
+
+              newsLink.appendChild(newsTitle);
+
+              const newsDescription = document.createElement("p");
+              newsDescription.textContent = popularNewsItem.description;
+
+              newsLink.appendChild(newsDescription);
             });
 
             // Load comments
@@ -281,7 +329,7 @@
 
       /**
        * Function to check if the current device is a mobile device.
-       * This function tests the user agent string against a variety of mobile devices through regex 
+       * This function tests the user agent string against a variety of mobile devices through regex
        *
        * @returns {boolean} - Returns true if the device is a mobile device, otherwise false.
        */
@@ -303,7 +351,6 @@
 
       // Journey Data Population
       DataLayer.journey_data.is_mobile = mobileCheck();
-
     </script>
   </body>
 </html>
