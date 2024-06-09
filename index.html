@@ -149,59 +149,9 @@
               }
             });
 
-            //Related news
-            const relatedNewsContainer =
-              document.querySelector(".related-news");
-
-            data.relatedNews.forEach((relatedNewsItem) => {
-              const newsItem = document.createElement("li");
-              newsItem.className = "list-group-item";
-
-              relatedNewsContainer.appendChild(newsItem);
-
-              const newsLink = document.createElement("a");
-              newsLink.classList.add("text-decoration-none");
-              newsLink.href = relatedNewsItem.link;
-
-              newsItem.appendChild(newsLink);
-
-              const newsTitle = document.createElement("h5");
-              newsTitle.textContent = relatedNewsItem.title;
-
-              newsLink.appendChild(newsTitle);
-
-              const newsDescription = document.createElement("p");
-              newsDescription.textContent = relatedNewsItem.description;
-
-              newsLink.appendChild(newsDescription);
-            });
-
-            //Popular news
-            const popularNewsContainer =
-              document.querySelector(".popular-news");
-
-            data.popularNews.forEach((popularNewsItem) => {
-              const newsItem = document.createElement("li");
-              newsItem.className = "list-group-item";
-
-              popularNewsContainer.appendChild(newsItem);
-
-              const newsLink = document.createElement("a");
-              newsLink.classList.add("text-decoration-none");
-              newsLink.href = popularNewsItem.link;
-
-              newsItem.appendChild(newsLink);
-
-              const newsTitle = document.createElement("h5");
-              newsTitle.textContent = popularNewsItem.title;
-
-              newsLink.appendChild(newsTitle);
-
-              const newsDescription = document.createElement("p");
-              newsDescription.textContent = popularNewsItem.description;
-
-              newsLink.appendChild(newsDescription);
-            });
+            // Related News and Popular News
+            populateNews(data.relatedNews, ".related-news");
+            populateNews(data.popularNews, ".popular-news");
 
             // Load comments
             const commentsContainer = document.querySelector(".comments");
@@ -287,6 +237,39 @@
           })
           .catch((error) => console.error("Error loading the data:", error));
       });
+
+      /**
+       * Populates the related and world news section with data from the data.json.
+       *
+       * @param {Array} newsData - Array of news objects containing the news data.
+       * @param {string} selectedContainer - The element ID for the container to populate with news items.
+       */
+      function populateNews(newsData, selectedContainer) {
+        const newsContainer = document.querySelector(selectedContainer);
+
+        newsData.forEach((newsItem) => {
+          const item = document.createElement("li");
+          item.className = "list-group-item";
+
+          newsContainer.append(item);
+
+          const articleLink = document.createElement("a");
+          articleLink.classList.add("text-decoration-none");
+          articleLink.href = newsItem.link;
+
+          item.appendChild(articleLink);
+
+          const articleTitle = document.createElement("h5");
+          articleTitle.textContent = newsItem.title;
+
+          articleLink.appendChild(articleTitle);
+
+          const articleDescription = document.createElement("p");
+          articleDescription.textContent = newsItem.description;
+
+          articleLink.appendChild(articleDescription);
+        });
+      }
     </script>
 
     <script>
