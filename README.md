@@ -68,7 +68,7 @@ I first changed the invocation order, so the function is defined first then it i
 Nitpick: I changed the function to a Descriptive Function Name rather than a function assigned to the window Object. This is purely due to the fact that this application is pertaining to one file, so there is not a need to have this function be global throughout the project. If this application grows, it may be beneficial to revert this particular change back.
 
 
-The next issue was to make the Related News and World News articles dynamic as currently they were staticly generated. In order to maintain the coding convention, initally I implemented this in a similar manner as the existing code for the comments or body. Which can be seen here:
+The next issue was to make the Related News and Popular News articles dynamic as currently they were staticly generated. In order to maintain the coding convention, initally I implemented this in a similar manner as the existing code for the comments or body. Which can be seen here:
 
 ```
            //Related news
@@ -126,9 +126,9 @@ The next issue was to make the Related News and World News articles dynamic as c
             });
 ```
 
-However, I was not happy with this initial implementation, if the requirements of the task changed and that there should be a featured image within the news article panel then I would have to update the codebase with it in 2 places (related news, world news). This raised concerns about maintainability and efficiency. 
+However, I was not happy with this initial implementation, if the requirements of the task changed and that there should be a featured image within the news article panel then I would have to update the codebase with it in 2 places (related news, popular news). This raised concerns about maintainability and efficiency. 
 
-I wanted to adhere to the Don't Repeat Yourself (DRY) principles, thus I created a function that would seamlessly generate me these news article. What's fantastic about this implementation is that it simplifies futre additions. For example, incorporating a "South American News" category would require minimal effort. As long as the dataset is updated, the implementation of this is one line of code as opposed to the previous implementation. This approach significantly reduces code complexity and ensures consistency across different news sections.
+I wanted to adhere to the Don't Repeat Yourself (DRY) principles, thus I created a function that would seamlessly generate me these news article. What's fantastic about this implementation is that it simplifies future additions. For example, incorporating a "South American News" category would require minimal effort. As long as the dataset is updated, the implementation of this is one line of code as opposed to the previous implementation. This approach significantly reduces code complexity and ensures consistency across different news sections.
 
 
 This is the final implementation I went with:
