@@ -1,0 +1,89 @@
+{
+    "headline": "Headline of the News Article",
+    "author": "Author Name",
+    "date": "April 11, 2023",
+    "image": "https://via.placeholder.com/800x400",
+    "body": [
+        {
+            "type": "paragraph",
+            "content": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Sed adipiscing diam donec adipiscing tristique risus. Iaculis nunc sed augue lacus viverra. Commodo nulla facilisi nullam vehicula ipsum a arcu cursus. Imperdiet proin fermentum leo vel. A condimentum vitae sapien pellentesque habitant morbi tristique senectus et. Aliquet nec ullamcorper sit amet risus nullam eget. Tellus mauris a diam maecenas sed enim ut sem viverra. Elit at imperdiet dui accumsan sit amet nulla facilisi morbi. Nulla facilisi nullam vehicula ipsum a arcu cursus. Tellus in metus vulputate eu scelerisque felis imperdiet proin. Auctor elit sed vulputate mi sit. Lobortis mattis aliquam faucibus purus in massa tempor nec feugiat. Non diam phasellus vestibulum lorem sed. Molestie ac feugiat sed lectus vestibulum mattis ullamcorper velit. Lorem donec massa sapien faucibus et molestie ac feugiat. Nunc aliquet bibendum enim facilisis gravida neque convallis a cras. Sociis natoque penatibus et magnis dis parturient. Quis commodo odio aenean sed. Amet purus gravida quis blandit turpis cursus in hac."
+        },
+        {
+            "type": "subheading",
+            "content": "Subheading"
+        },
+        {
+            "type": "paragraph",
+            "content": "Lacinia at quis risus sed. Elementum curabitur vitae nunc sed velit dignissim sodales ut. Faucibus turpis in eu mi bibendum neque egestas congue quisque. Varius quam quisque id diam vel. Vulputate odio ut enim blandit volutpat maecenas volutpat blandit. Quis vel eros donec ac odio tempor orci. Massa vitae tortor condimentum lacinia quis vel eros. Dignissim suspendisse in est ante in nibh mauris cursus mattis."
+        },
+        {
+            "type": "quote",
+            "content": "Lorem ipsum dolor sit amet, consectetur adipiscing elit...",
+            "footer": "Someone Famous in Source Title"
+        },
+        {
+            "type": "subheading",
+            "content": "Another Subheading"
+        },
+        {
+            "type": "paragraph",
+            "content": "Cras tincidunt lobortis feugiat vivamus at augue eget arcu dictum. Cum sociis natoque penatibus et magnis dis parturient montes nascetur. Malesuada fames ac turpis egestas sed tempus urna et pharetra. Tincidunt vitae semper quis lectus nulla. Sit amet nulla facilisi morbi tempus iaculis urna id volutpat."
+        },
+        {
+            "type": "list",
+            "items": [
+                "Item 1",
+                "Item 2",
+                "Item 3"
+            ]
+        }
+    ],
+    "comments": [
+        {
+            "name": "Paul Smith",
+            "date": "2d",
+            "content": "Et tortor at risus viverra adipiscing at in tellus. Interdum velit laoreet id donec. Sit amet consectetur adipiscing elit pellentesque habitant morbi tristique senectus. ",
+            "replies": [
+                {
+                    "name": "Elliot Smith",
+                    "date": "2d",
+                    "content": "Lorem ipsum dolor sit, amet consectetur adipisicing elit."
+                },
+                {
+                    "name": "July Parons",
+                    "date": "1d",
+                    "content": "Nulla pharetra diam sit amet nisl suscipit adipiscing. Lorem ipsum dolor sit amet consectetur adipiscing elit."
+                }
+            ]
+        },
+        {
+            "name": "Julie Roberts",
+            "date": "3d",
+            "content": "Lorem ipsum dolor sit amet consectetur adipisicing elit."
+        }
+    ],
+    "relatedNews": [
+        {
+            "title": "Emerging Trends in Food Retail",
+            "description": "An overview of how digital transformation is shaping the food retail industry.",
+            "link": "www.retail-week.com"
+        },
+        {
+            "title": "Top 50 Restaurants 2024",
+            "description": "Discover the newest rankings of the world's best restaurants for the year 2024.",
+            "link": "www.theworlds50best.com"
+        }
+    ],
+    "popularNews": [
+        {
+            "title": "Innovations in Grocery Shopping",
+            "description": "A look at the latest technologies being employed by supermarkets around the globe.",
+            "link": "www.thegrocer.co.uk"
+        },
+        {
+            "title": "Sustainability in Retail",
+            "description": "Exploring the steps major retailers are taking towards more sustainable operations.",
+            "link": "www.retail-week.com"
+        }
+    ]
+}
