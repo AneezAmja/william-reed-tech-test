@@ -103,9 +103,9 @@
         </aside>
       </div>
     </div>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.0.2/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.0.2/js/bootstrap.bundle.min.js" defer></script>
 
-    <script>
+    <script defer>
       document.addEventListener("DOMContentLoaded", function () {
         fetch("data.json")
           .then((response) => response.json())
@@ -273,7 +273,7 @@
       }
     </script>
 
-    <script>
+    <script defer>
       var DataLayer = {
         page_data: {
           page_domain: "mydomain.com",
