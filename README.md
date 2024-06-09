@@ -27,7 +27,7 @@ Ensure you have a modern web browser installed. No additional software is requir
 
 ### Installation
     1. Clone this repository:
-    ```bash
+    ```
     git clone https://github.com/yourusername/single-post-news-article.git
     ```
 
@@ -43,12 +43,12 @@ The first thing I did when I opened up the testURL was to check the console, as 
 Then I went to find where the error was occuring, it was due to the following code: 
 
 ```
-	// Journey Data Population
-				DataLayer.journey_data.is_mobile = mobileCheck();
-	// Is mobile
-window.mobileCheck = function() {
+// Journey Data Population
+  DataLayer.journey_data.is_mobile = mobileCheck();
+// Is mobile
+  window.mobileCheck = function() {
     // rest of function code...
-};
+  };
 
 ```
 
