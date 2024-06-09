@@ -278,10 +278,14 @@
           logged_in_status: "Logged out",
         },
       };
-      // Journey Data Population
-      DataLayer.journey_data.is_mobile = mobileCheck();
-      // Is mobile
-      window.mobileCheck = function () {
+
+      /**
+       * Function to check if the current device is a mobile device.
+       * This function tests the user agent string against a variety of mobile devices through regex 
+       *
+       * @returns {boolean} - Returns true if the device is a mobile device, otherwise false.
+       */
+      function mobileCheck() {
         let check = false;
         (function (a) {
           if (
@@ -295,7 +299,11 @@
             check = true;
         })(navigator.userAgent || navigator.vendor || window.opera);
         return check;
-      };
+      }
+
+      // Journey Data Population
+      DataLayer.journey_data.is_mobile = mobileCheck();
+
     </script>
   </body>
 </html>
