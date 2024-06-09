@@ -12,12 +12,12 @@
   <body>
     <div class="container py-5">
       <div class="row">
-        <div class="news col-md-8">
+        <main class="news col-md-8">
           <h1></h1>
           <p class="lead"></p>
 
           <img src="" class="img-fluid my-3" alt="News Article Image" />
-        </div>
+        </main>
         <div class="replies col-md-8">
           <!-- ======= Comments ======= -->
           <div class="comments">
@@ -28,7 +28,7 @@
                   <img
                     class="avatar-img"
                     src="https://loremflickr.com/cache/resized/65535_51652575138_e668ebe8a3_s_50_50_nofilter.jpg"
-                    alt=""
+                    alt="avatar image"
                     class="img-fluid"
                   />
                 </div>
@@ -83,23 +83,24 @@
           </div>
           <!-- End Comments Form -->
         </div>
-        <div class="col-md-4">
+
+        <aside class="col-md-4">
           <div class="sticky-top">
             <div class="card my-3">
               <div class="card-body">
                 <h5 class="card-title">Related News</h5>
-                <ul class="list-group related-news"></ul>
+                <ul class="list-group related-news" role="list"></ul>
               </div>
             </div>
 
             <div class="card my-3">
               <div class="card-body">
                 <h5 class="card-title">Popular News</h5>
-                <ul class="list-group popular-news"></ul>
+                <ul class="list-group popular-news" role="list"></ul>
               </div>
             </div>
           </div>
-        </div>
+        </aside>
       </div>
     </div>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.0.2/js/bootstrap.bundle.min.js"></script>
@@ -250,7 +251,7 @@
         newsData.forEach((newsItem) => {
           const item = document.createElement("li");
           item.className = "list-group-item";
-
+          item.setAttribute("role", "listitem");
           newsContainer.append(item);
 
           const articleLink = document.createElement("a");
