@@ -8,80 +8,93 @@
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.0.2/css/bootstrap.min.css"
     />
+
+    <style>
+
+      @media (max-width: 991px) {
+        /* aside will be static until desktop */
+        .sticky-top {
+          position: static ;
+        }
+      }
+    </style>
   </head>
   <body>
     <div class="container py-5">
       <div class="row">
-        <main class="news col-md-8">
-          <h1></h1>
-          <p class="lead"></p>
+        <div class="col">
+          <main class="news col-md-8">
+            <h1></h1>
+            <p class="lead"></p>
 
-          <img src="" class="img-fluid my-3" alt="News Article Image" />
-        </main>
-        <div class="replies col-md-8">
-          <!-- ======= Comments ======= -->
-          <div class="comments">
-            <h5 class="comment-title py-4">Comments</h5>
-            <div class="comment d-flex mb-4">
-              <div class="flex-shrink-0">
-                <div class="avatar avatar-sm rounded-circle">
-                  <img
-                    class="avatar-img"
-                    src="https://loremflickr.com/cache/resized/65535_51652575138_e668ebe8a3_s_50_50_nofilter.jpg"
-                    alt="avatar image"
-                    class="img-fluid"
-                  />
+            <img src="" class="img-fluid my-3" alt="News Article Image" />
+          </main>
+
+          <div class="replies col-md-8">
+            <!-- ======= Comments ======= -->
+            <div class="comments">
+              <h5 class="comment-title py-4">Comments</h5>
+              <div class="comment d-flex mb-4">
+                <div class="flex-shrink-0">
+                  <div class="avatar avatar-sm rounded-circle">
+                    <img
+                      class="avatar-img"
+                      src="https://loremflickr.com/cache/resized/65535_51652575138_e668ebe8a3_s_50_50_nofilter.jpg"
+                      alt="avatar image"
+                      class="img-fluid"
+                    />
+                  </div>
                 </div>
               </div>
             </div>
-          </div>
-          <!-- End Comments -->
+            <!-- End Comments -->
 
-          <!-- ======= Comments Form ======= -->
-          <div class="row justify-content-center mt-5">
-            <div class="col-lg-12">
-              <h5 class="comment-title">Leave a Comment</h5>
-              <div class="row">
-                <div class="col-lg-6 mb-3">
-                  <label for="comment-name">Name</label>
-                  <input
-                    type="text"
-                    class="form-control"
-                    id="comment-name"
-                    placeholder="Enter your name"
-                  />
-                </div>
-                <div class="col-lg-6 mb-3">
-                  <label for="comment-email">Email</label>
-                  <input
-                    type="text"
-                    class="form-control"
-                    id="comment-email"
-                    placeholder="Enter your email"
-                  />
-                </div>
-                <div class="col-12 mb-3">
-                  <label for="comment-message">Message</label>
+            <!-- ======= Comments Form ======= -->
+            <div class="row justify-content-center mt-5">
+              <div class="col-lg-12">
+                <h5 class="comment-title">Leave a Comment</h5>
+                <div class="row">
+                  <div class="col-lg-6 mb-3">
+                    <label for="comment-name">Name</label>
+                    <input
+                      type="text"
+                      class="form-control"
+                      id="comment-name"
+                      placeholder="Enter your name"
+                    />
+                  </div>
+                  <div class="col-lg-6 mb-3">
+                    <label for="comment-email">Email</label>
+                    <input
+                      type="text"
+                      class="form-control"
+                      id="comment-email"
+                      placeholder="Enter your email"
+                    />
+                  </div>
+                  <div class="col-12 mb-3">
+                    <label for="comment-message">Message</label>
 
-                  <textarea
-                    class="form-control"
-                    id="comment-message"
-                    placeholder="Enter your name"
-                    cols="30"
-                    rows="10"
-                  ></textarea>
-                </div>
-                <div class="col-12">
-                  <input
-                    type="submit"
-                    class="btn btn-primary"
-                    value="Post comment"
-                  />
+                    <textarea
+                      class="form-control"
+                      id="comment-message"
+                      placeholder="Enter your name"
+                      cols="30"
+                      rows="10"
+                    ></textarea>
+                  </div>
+                  <div class="col-12">
+                    <input
+                      type="submit"
+                      class="btn btn-primary"
+                      value="Post comment"
+                    />
+                  </div>
                 </div>
               </div>
             </div>
+            <!-- End Comments Form -->
           </div>
-          <!-- End Comments Form -->
         </div>
 
         <aside class="col-md-4">
@@ -92,7 +105,6 @@
                 <ul class="list-group related-news" role="list"></ul>
               </div>
             </div>
-
             <div class="card my-3">
               <div class="card-body">
                 <h5 class="card-title">Popular News</h5>
@@ -103,7 +115,10 @@
         </aside>
       </div>
     </div>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.0.2/js/bootstrap.bundle.min.js" defer></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.0.2/js/bootstrap.bundle.min.js"
+      defer
+    ></script>
 
     <script defer>
       document.addEventListener("DOMContentLoaded", function () {
@@ -256,7 +271,6 @@
 
           const articleLink = document.createElement("a");
           articleLink.classList.add("text-decoration-none");
-          articleLink.href = newsItem.link;
 
           item.appendChild(articleLink);
 
