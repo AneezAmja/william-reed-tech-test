@@ -134,8 +134,9 @@ I wanted to adhere to the Don't Repeat Yourself (DRY) principles, thus I created
 This is the final implementation I went with:
 
 ```
-    function populateNews(newsData, selectedContainer) {
+         function populateNews(newsData, selectedContainer) {
         const newsContainer = document.querySelector(selectedContainer);
+        const BASEURL = "https://";
 
         newsData.forEach((newsItem) => {
           const item = document.createElement("li");
@@ -145,7 +146,10 @@ This is the final implementation I went with:
 
           const articleLink = document.createElement("a");
           articleLink.classList.add("text-decoration-none");
-          articleLink.href = newsItem.link;
+
+          newsItem.link.startsWith("https") || newsItem.link.startsWith("http")
+            ? (articleLink.href = newsItem.link)
+            : (articleLink.href = BASEURL + newsItem.link);
 
           item.appendChild(articleLink);
 
