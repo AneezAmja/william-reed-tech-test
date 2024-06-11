@@ -10,11 +10,10 @@
     />
 
     <style>
-
       @media (max-width: 991px) {
         /* aside will be static until desktop */
         .sticky-top {
-          position: static ;
+          position: static;
         }
       }
     </style>
@@ -262,6 +261,7 @@
        */
       function populateNews(newsData, selectedContainer) {
         const newsContainer = document.querySelector(selectedContainer);
+        const BASEURL = "https://";
 
         newsData.forEach((newsItem) => {
           const item = document.createElement("li");
@@ -271,6 +271,10 @@
 
           const articleLink = document.createElement("a");
           articleLink.classList.add("text-decoration-none");
+
+          newsItem.link.startsWith("https") || newsItem.link.startsWith("http")
+            ? (articleLink.href = newsItem.link)
+            : (articleLink.href = BASEURL + newsItem.link);
 
           item.appendChild(articleLink);
 
